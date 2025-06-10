@@ -1,4 +1,10 @@
+
 print ("   /|")
 print ("  / |")
 print (" /  |")
 print ("/___|")
+
+print("There once was a girl named Janet.")
+print("She was almost 12 years old.")
+print("Janet didn't like her name that much,")
+print("nor did she like being so little.")
