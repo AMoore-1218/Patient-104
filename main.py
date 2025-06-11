@@ -1,3 +1,4 @@
+pip install pygame
 import pygame.mixer
 import threading
 import os
