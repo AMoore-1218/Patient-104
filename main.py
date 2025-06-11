@@ -1,3 +1,30 @@
+def play_again():
+  print("\n" + "="*50)
+  choice = input("Would you like to play again? (y/n):").lower()
+  if choice == 'y' or choice == "yes":
+    print("\n" + "="*50)
+    start_game()
+
+def bad_ending():
+  print("You should've just minded your business, keep a low cover. Now, you're being dragged into a dark, cold room by two men dressed in all white lab coats, never to be seen again.")
+  print("You've got the bad ending. Would you like to play again to get a new ending?")
+  play_again()
+
+def good_ending():
+  print("You managed to get out of the hospital with everything you came in with…give or take. Maybe next time avoid random places advertising free cream cheese bagels.")
+  print("You got the good ending. Would you like to play again to get a new ending?")
+  play_again()
+
+def secrets_ending():
+  print("You found a book of all sorts of twisted documents, detailing all the terrible things these people came up with in here. Who knows how many more they'll be going after! It's time to tell the world what you saw…")
+  print("You've got the secrets ending. Would you like to play again to get a new ending?")
+  play_again()
+
+def traitor_ending():
+  print("You're really willing to give up your morals just to save your own hide, huh? Not like you can change it, you're one of them now, meaning there's no way things will be the same again.")
+  print("You've got the traitor ending. Would you like to play again to get a new ending?")
+  play_again()
+
 def start_game():
   name = input("Enter your name:")
   print("Welcome, " + name + "!")
@@ -13,7 +40,7 @@ def start_game():
     print("3. Look around the room")
     print("4. Go to the window")
     choice = input("Enter '1', '2', '3', or '4':")
-    
+
   elif choice == '2':
     print("You move over to the window and notice that it's a relatively full parking lot down below. Perhaps you're in a hospital? While looking out the window, you hear noises from the hallway, what do you do?")
     print("1. Go to the door")
@@ -39,28 +66,3 @@ def start_game():
       print("3. Close your eyes and pretend to sleep")
       choice = input("Enter '1', '2', or '3':")
 start_game()
-def play_again():
-  print("\n" + "="*50)
-  choice = input("Would you like to play again? (y/n):").lower()
-  if choice == 'y' or choice == "yes":
-    print("\n" + "="*50)
-    start_game()
-def bad_ending():
-  print("You should’ve just minded your business, keep a low cover. Now, you’re being dragged into a dark, cold room by two men dressed in all white lab coats, never to be seen again.")
-  print("You’ve got the bad ending. Would you like to play again to get a new ending?")
-play_again()
-
-def good_ending():
-  print("You managed to get out of the hospital with everything you came in with…give or take. Maybe next time avoid random places advertising free cream cheese bagels.")
-  print("You got the good ending. Would you like to play again to get a new ending?")
-play_again()
-
-def secrets_ending():
-  print("You found a book of all sorts of twisted documents, detailing all the terrible things these people came up with in here. Who knows how many more they’ll be going after! It’s time to tell the world what you saw…")
-  print("You’ve got the secrets ending. Would you like to play again to get a new ending?")
-play_again()
-
-def traitor_ending():
-  print("You’re really willing to give up your morals just to save your own hide, huh? Not like you can change it, you’re one of them now, meaning there’s no way things will be the same again.")
-  print("You’ve got the traitor ending. Would you like to play again to get a new ending?")
-play_again()
