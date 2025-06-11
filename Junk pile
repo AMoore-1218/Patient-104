@@ -1,0 +1,190 @@
+
+from fasthtml.common import *
+
+app = FastHTML()
+
+@app.route('/')
+def home():
+    return Html(
+        Head(Title("My FastHTML App")),
+        Body(
+            H1("Words by Moore"),
+            P("Every word you'll find on here has been written by myself, Amelia! Using the menu, you'll be able to find my writing, as well as a short section that's all about me! "),
+            A("Learn more about FastHTML", href="https://fastht.ml/")
+        )
+    )
+
+if __name__ == "__main__":
+    serve(host="0.0.0.0", port=5000)
+
+def start_game():
+    print("🏰 Welcome to the Mysterious Castle Adventure! 🏰")
+    print("You find yourself standing in front of an old, spooky castle.")
+    print("The heavy wooden door creaks in the wind...")
+    print()
+
+    castle_entrance()
+
+def castle_entrance():
+    print("What do you want to do?")
+    print("1. Enter through the front door")
+    print("2. Walk around to the back of the castle")
+    print("3. Knock on the door")
+
+    choice = input("Enter your choice (1, 2, or 3): ")
+
+    if choice == "1":
+        front_door()
+    elif choice == "2":
+        back_of_castle()
+    elif choice == "3":
+        knock_door()
+    else:
+        print("That's not a valid choice! Try again.")
+        castle_entrance()
+
+def front_door():
+    print("\n🚪 You push open the heavy door...")
+    print("Inside, you see a grand hallway with two staircases.")
+    print("There's also a door under the left staircase.")
+    print()
+    print("Where do you go?")
+    print("1. Up the left staircase")
+    print("2. Up the right staircase") 
+    print("3. Through the door under the stairs")
+
+    choice = input("Enter your choice (1, 2, or 3): ")
+
+    if choice == "1":
+        left_stairs()
+    elif choice == "2":
+        right_stairs()
+    elif choice == "3":
+        secret_door()
+    else:
+        print("That's not a valid choice! Try again.")
+        front_door()
+
+def back_of_castle():
+    print("\n🌿 You walk around to the back of the castle.")
+    print("You discover a beautiful garden with a well in the center.")
+    print("There's also a small door leading into the castle.")
+    print()
+    print("What do you do?")
+    print("1. Look into the well")
+    print("2. Enter through the back door")
+    print("3. Explore the garden more")
+
+    choice = input("Enter your choice (1, 2, or 3): ")
+
+    if choice == "1":
+        well_ending()
+    elif choice == "2":
+        back_door()
+    elif choice == "3":
+        garden_treasure()
+    else:
+        print("That's not a valid choice! Try again.")
+        back_of_castle()
+
+def knock_door():
+    print("\n👻 You knock three times on the door...")
+    print("Suddenly, the door swings open by itself!")
+    print("A friendly ghost appears and says:")
+    print("'Welcome! I've been so lonely. Would you like some tea?'")
+    print()
+    print("What do you say?")
+    print("1. 'Yes, I'd love some tea!'")
+    print("2. 'No thanks, I'm just exploring.'")
+    print("3. Run away screaming")
+
+    choice = input("Enter your choice (1, 2, or 3): ")
+
+    if choice == "1":
+        ghost_friend_ending()
+    elif choice == "2":
+        polite_ghost_ending()
+    elif choice == "3":
+        scared_ending()
+    else:
+        print("That's not a valid choice! Try again.")
+        knock_door()
+
+def left_stairs():
+    print("\n📚 You climb the left staircase and find a library!")
+    print("There are thousands of books and a cozy reading chair.")
+    print("You notice one book is glowing on the shelf...")
+    print("🎉 You've discovered the Library of Infinite Knowledge!")
+    print("You spend hours reading amazing stories and learning new things.")
+    print("CONGRATULATIONS! You found a magical ending!")
+    play_again()
+
+def right_stairs():
+    print("\n👑 You climb the right staircase and enter a royal bedroom!")
+    print("There's a beautiful four-poster bed and a treasure chest.")
+    print("You open the chest and find it full of gold coins!")
+    print("🎉 You've become rich beyond your wildest dreams!")
+    print("CONGRATULATIONS! You found the treasure ending!")
+    play_again()
+
+def secret_door():
+    print("\n🔮 You open the door under the stairs...")
+    print("It's a magical room filled with floating candles and crystals!")
+    print("A wise wizard appears and offers to teach you magic!")
+    print("🎉 You've become the wizard's apprentice!")
+    print("CONGRATULATIONS! You found the magic ending!")
+    play_again()
+
+def well_ending():
+    print("\n💫 You look into the well and see a shimmering light...")
+    print("You make a wish and suddenly you can fly!")
+    print("🎉 You soar above the castle and see the whole kingdom!")
+    print("CONGRATULATIONS! You found the flying ending!")
+    play_again()
+
+def back_door():
+    print("\n🍳 You enter through the back door into the kitchen.")
+    print("A friendly cook gives you the most delicious meal ever!")
+    print("🎉 You've found the best food in the kingdom!")
+    print("CONGRATULATIONS! You found the feast ending!")
+    play_again()
+
+def garden_treasure():
+    print("\n🌸 You explore the garden and find a hidden path...")
+    print("It leads to a secret grove where unicorns live!")
+    print("🎉 The unicorns adopt you as their friend!")
+    print("CONGRATULATIONS! You found the unicorn ending!")
+    play_again()
+
+def ghost_friend_ending():
+    print("\n☕ You have tea with the friendly ghost!")
+    print("You become best friends and have wonderful conversations.")
+    print("🎉 You've found a true friend in the most unexpected place!")
+    print("CONGRATULATIONS! You found the friendship ending!")
+    play_again()
+
+def polite_ghost_ending():
+    print("\n👻 The ghost appreciates your politeness!")
+    print("They give you a magical compass that always points to adventure!")
+    print("🎉 You'll never be lost again!")
+    print("CONGRATULATIONS! You found the adventure ending!")
+    play_again()
+
+def scared_ending():
+    print("\n🏃‍♀️ You run away as fast as you can!")
+    print("You're safe, but you missed out on meeting a friendly ghost.")
+    print("Sometimes the scary things aren't so scary after all!")
+    print("Maybe next time you'll be braver!")
+    play_again()
+
+def play_again():
+    print("\n" + "="*50)
+    choice = input("Would you like to play again? (yes/no): ").lower()
+    if choice == "yes" or choice == "y":
+        print("\n" + "="*50)
+        start_game()
+    else:
+        print("Thanks for playing! See you next time! 👋")
+
+# Start the game
+start_game()
