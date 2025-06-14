@@ -1,17 +1,68 @@
-skills:
-  functions
-  conditionals
-  user input
-  loops
-  string manipulation
-Expansions:
-  Scenes
-  Inventory
-  Health/Stats
-  Puzzles
-  Save progress
-Main Stuff:
-  Theme - Creepy Hospital
-  About 3-4 choices per situation
-  Multiple paths to same ending
-  3 endings (good, bad, okay) minimum/5 endings (A-F rating)
+elif choice == '2':
+    print("You move over to the window and notice that it's a relatively full parking lot down below. Perhaps you're in a hospital? While looking out the window, you hear noises from the hallway, what do you do?")
+    print("1. Go to the door")
+    print("2. Go back to bed and pretend to sleep.")
+    print("3. Try to hide")
+    choice = input("Enter '1', '2', or '3':")
+      if choice == '1':
+          print()
+      elif choice == '2':
+        print("You kept your head against the pillow and heard a noise from the hallway, what do you do?"
+        )
+        print("1. Try to hide")
+        print("2. Check it out")
+        print("3. Close your eyes and pretend to sleep")
+        choice = input("Enter '1', '2', or '3':")
+      if choice == '1':
+                  print("You've got a couple choices, but not a lot of time. Quick, choose!")
+                  print("1. The closet")
+                  print("2. Under the bed")
+                  print("3. Behind the curtain")
+                  print("4. Stand brave!")
+                  choice = input("Enter '1', '2', '3', or '4':")
+      elif choice == '2':
+              bad_ending()
+      elif choice == '3':
+        print(
+            "You hear people walk in, talking quickly between each other, as well as the sounds of papers being shuffled. The steps grow quiet, though it feels as though they're close by. What now?"
+        )
+        print("1. Open your eyes and ask questions")
+        print("2. Just open your eyes")
+        print("3. Remain quiet and still")
+        choice = input("Enter '1', '2', or '3':")
+        if choice == '1':
+          bad_ending()
+        elif choice == '2':
+          print(
+              "The two men jump up in shock, having believed that you were already deceased. They begin fumbling around with the tools on their belts, giving you just enough time to rush out. Which way?"
+          )
+          print("1. Down the left hallway, the lights make it easier to see")
+          print("2. Down the right hallway, the darkness could cover you")
+          print("3. The room across from you, maybe someone in there can help")
+          choice = input("Enter '1', '2', or '3':")
+        elif choice == '3':
+          print(
+              "You can hear something tapping against a wooden surface. Considering where you are, it's probably just a clipboard.\nFollowing the conversation, you hear something about an experiment. Surely it's not you! As far as you're concerned, it won't be you."
+          )
+        print("1. Jump up and fight back")
+        print("2. Open your eyes and ask questions")
+        print("3. Rush out of the room")
+        choice = input("Enter '1', '2', or '3':")
+        if choice == '1':
+          bad_ending()
+        elif choice == '2':
+          print(
+              "The two men jump up in shock, having believed that you were already deceased. They begin fumbling around with the tools on their belts, giving you just enough time to rush out. Which way?"
+          )
+          print("1. Down the left hallway, the lights make it easier to see")
+          print("2. Down the right hallway, the darkness could cover you")
+          print("3. The room across from you, maybe someone in there can help")
+          choice = input("Enter '1', '2', or '3':")
+        elif choice == '3':
+          print(
+              "You rushed out the room, the two people being alarmed by your sudden movement. You don't have much time to make a choice."
+          )
+          print("1. Down the left hallway, the lights make it easier to see")
+          print("2. Down the right hallway, the darkness could cover you")
+          print("3. The room across from you, maybe someone in there can help")
+          choice = input("Enter '1', '2', or '3':")
