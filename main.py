@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from fasthtml import RedirectResponse *
+from fasthtml import RedirectResponse
 
 app, rt = fast_app()
 
