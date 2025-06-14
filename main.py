@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from fasthtml import RedirectResponse
+from fasthtml import Redirect
 
 app, rt = fast_app()
 
@@ -82,7 +82,7 @@ def post(choice: str):
             return bed_choice()
 
     # Add more choice handling logic here for different game states
-    return RedirectResponse("/")
+    return Redirect("/")
 
 def door_choice():
     return Titled("Patient 104",
@@ -160,21 +160,21 @@ def post(choice: str):
     elif choice == "2":
         return delusion_ending()
     # Add more door action logic here
-    return RedirectResponse("/")
+    return Redirect("/")
 
 @rt("/window-action")
 def post(choice: str):
     if choice == "3":
         return hiding_choice()
     # Add more window action logic here
-    return RedirectResponse("/")
+    return Redirect("/")
 
 @rt("/bed-action") 
 def post(choice: str):
     if choice == "2":
         return delusion_ending()
     # Add more bed action logic here
-    return RedirectResponse("/")
+    return Redirect("/")
 
 def hallway_choice():
     return Titled("Patient 104",
@@ -232,7 +232,7 @@ def post(choice: str):
     elif choice == "3":
         return right_hallway_choice()
     # Add more hallway logic here
-    return RedirectResponse("/")
+    return Redirect("/")
 
 @rt("/hiding-action")
 def post(choice: str):
@@ -241,7 +241,7 @@ def post(choice: str):
     elif choice == "4":
         return bad_ending()
     # Add more hiding logic here
-    return RedirectResponse("/")
+    return Redirect("/")
 
 def closet_choice():
     return Titled("Patient 104",
@@ -286,7 +286,7 @@ def right_hallway_choice():
 @rt("/closet-action")
 def post(choice: str):
     # Add closet action logic
-    return RedirectResponse("/")
+    return Redirect("/")
 
 @rt("/exit-choice")
 def post(choice: str):
@@ -294,7 +294,7 @@ def post(choice: str):
         return good_ending()
     elif choice == "2":
         return book_choice()
-    return RedirectResponse("/")
+    return Redirect("/")
 
 def book_choice():
     return Titled("Patient 104",
@@ -327,7 +327,7 @@ def post(choice: str):
         return secrets_ending()
     elif choice == "3":
         return bad_ending()
-    return RedirectResponse("/")
+    return Redirect("/")
 
 # Ending functions
 def bad_ending():
