@@ -160,7 +160,7 @@ def post(choice: str):
     elif choice == "2":
         return bed_choice()
     elif choice == "3":
-        return window_choice()  # Look around the room leads to window
+        return window_choice()
     elif choice == "4":
         return window_choice()
     return Redirect("/")
@@ -178,9 +178,9 @@ def post(choice: str):
 @rt("/bed-action") 
 def post(choice: str):
     if choice == "1":
-        return good_ending()  # Yes, investigate the beeping
+        return delusion_ending()  # Yes, investigate the beeping leads to waking up
     elif choice == "2":
-        return delusion_ending()  # No, don't investigate
+        return bed_choice()  # No, stay in bed - loop back to bed choice
     return Redirect("/")
 
 def hallway_choice():
@@ -247,11 +247,11 @@ def post(choice: str):
     if choice == "1":
         return closet_choice()
     elif choice == "2":
-        return good_ending()  # Under the bed
+        return good_ending()  # Under the bed - successful hiding
     elif choice == "3":
-        return bad_ending()   # Behind the curtain
+        return bad_ending()   # Behind the curtain - caught
     elif choice == "4":
-        return bad_ending()   # Stand brave
+        return bad_ending()   # Stand brave - caught
     return Redirect("/")
 
 def closet_choice():
@@ -288,7 +288,7 @@ def right_hallway_choice():
                     Br(), Br(),
                     Button("Make Choice", type="submit")
                 ),
-                method="post", action="/exit-choice"
+                method="post", action="/right-hallway-action"
             ),
             style="max-width: 600px; margin: 0 auto; padding: 20px;"
         )
@@ -300,6 +300,14 @@ def post(choice: str):
         return good_ending()  # Stay in place
     elif choice == "2":
         return bad_ending()   # Get out and look around
+    return Redirect("/")
+
+@rt("/right-hallway-action")
+def post(choice: str):
+    if choice == "1":
+        return good_ending()  # Exit successfully
+    elif choice == "2":
+        return book_choice()  # Wooden door
     return Redirect("/")
 
 @rt("/exit-choice")
