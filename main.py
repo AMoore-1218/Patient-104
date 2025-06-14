@@ -82,7 +82,7 @@ def post(choice: str):
             return bed_choice()
 
     # Add more choice handling logic here for different game states
-    return Redirect("/")
+    return RedirectResponse("/")
 
 def door_choice():
     return Titled("Patient 104",
@@ -163,7 +163,7 @@ def post(choice: str):
         return window_choice()
     elif choice == "4":
         return window_choice()
-    return Redirect("/")
+    return RedirectResponse("/")
 
 @rt("/window-action")
 def post(choice: str):
@@ -173,7 +173,7 @@ def post(choice: str):
         return bed_choice()
     elif choice == "3":
         return hiding_choice()
-    return Redirect("/")
+    return RedirectResponse("/")
 
 @rt("/bed-action") 
 def post(choice: str):
@@ -181,7 +181,7 @@ def post(choice: str):
         return delusion_ending()  # Yes, investigate the beeping leads to waking up
     elif choice == "2":
         return bed_choice()  # No, stay in bed - loop back to bed choice
-    return Redirect("/")
+    return RedirectResponse("/")
 
 def hallway_choice():
     return Titled("Patient 104",
@@ -240,7 +240,7 @@ def post(choice: str):
         return bad_ending()  # Room across from you
     elif choice == "3":
         return right_hallway_choice()
-    return Redirect("/")
+    return RedirectResponse("/")
 
 @rt("/hiding-action")
 def post(choice: str):
@@ -252,7 +252,7 @@ def post(choice: str):
         return bad_ending()   # Behind the curtain - caught
     elif choice == "4":
         return bad_ending()   # Stand brave - caught
-    return Redirect("/")
+    return RedirectResponse("/")
 
 def closet_choice():
     return Titled("Patient 104",
@@ -300,7 +300,7 @@ def post(choice: str):
         return good_ending()  # Stay in place
     elif choice == "2":
         return bad_ending()   # Get out and look around
-    return Redirect("/")
+    return RedirectResponse("/")
 
 @rt("/right-hallway-action")
 def post(choice: str):
@@ -308,7 +308,7 @@ def post(choice: str):
         return good_ending()  # Exit successfully
     elif choice == "2":
         return book_choice()  # Wooden door
-    return Redirect("/")
+    return RedirectResponse("/")
 
 @rt("/exit-choice")
 def post(choice: str):
@@ -316,7 +316,7 @@ def post(choice: str):
         return good_ending()
     elif choice == "2":
         return book_choice()
-    return Redirect("/")
+    return RedirectResponse("/")
 
 def book_choice():
     return Titled("Patient 104",
@@ -349,7 +349,7 @@ def post(choice: str):
         return secrets_ending()
     elif choice == "3":
         return bad_ending()
-    return Redirect("/")
+    return RedirectResponse("/")
 
 # Ending functions
 def bad_ending():
