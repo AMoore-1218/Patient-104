@@ -273,7 +273,7 @@ def start_game():
                      print("1. Stay in place")
                      print("2. Get out and look around")
                      choice = input("Enter '1' or '2':")
-                     --if choice == '1':
+                     if choice == '1':
                         print("You look around the space and notice a letter on the ground. It's a letter from someone's family, asking about their father and why they hadn't heard anything from him in a while. You can't help but feel sorry for them. With the letter, you can either...")
                         print("1. Keep it to read later and exit the closet")
                         print("2. Leave it there and exit the closet")
@@ -639,7 +639,7 @@ def start_game():
                                                              print("The pain from the sudden impact distracts him just long enough for you to slip past and get out of there! You ran until you couldn't run anymore, your heart pounding in your chest. You didn't fully know where you were just yet, but as long as you're not in there, it didn't really matter.")
                                                              good_ending()
                                                           elif choice == '4':
-                                                             print("You shove the book into your pocket and make a break for it. Thankfully, the man was just disoriented enough by all your movement that you could slip past and burst through the doors. You didn't know where you were, but you knew you were out of there. As far as you're concerned, something's going to be done about this place, even if it's the last thing you do."\)
+                                                             print("You shove the book into your pocket and make a break for it. Thankfully, the man was just disoriented enough by all your movement that you could slip past and burst through the doors. You didn't know where you were, but you knew you were out of there. As far as you're concerned, something's going to be done about this place, even if it's the last thing you do.")
                                                              secrets_ending()
                                                      elif choice == '2':
                                                         print("You put the book down, deciding it's not worth you time, and head out the room. However, just as you exited, three people were waiting outside, all of them ready to pin you down in a second. What do you do?")
@@ -836,7 +836,7 @@ def start_game():
              print("1. Stay in place")
              print("2. Get out and look around")
              choice = input("Enter '1' or '2':")
-             --if choice == '1':
+             if choice == '1':
                 print("You look around the space and notice a letter on the ground. It's a letter from someone's family, asking about their father and why they hadn't heard anything from him in a while. You can't help but feel sorry for them. With the letter, you can either...")
                 print("1. Keep it to read later and exit the closet")
                 print("2. Leave it there and exit the closet")
@@ -1202,7 +1202,7 @@ def start_game():
                                                      print("The pain from the sudden impact distracts him just long enough for you to slip past and get out of there! You ran until you couldn't run anymore, your heart pounding in your chest. You didn't fully know where you were just yet, but as long as you're not in there, it didn't really matter.")
                                                      good_ending()
                                                   elif choice == '4':
-                                                     print("You shove the book into your pocket and make a break for it. Thankfully, the man was just disoriented enough by all your movement that you could slip past and burst through the doors. You didn't know where you were, but you knew you were out of there. As far as you're concerned, something's going to be done about this place, even if it's the last thing you do."\)
+                                                     print("You shove the book into your pocket and make a break for it. Thankfully, the man was just disoriented enough by all your movement that you could slip past and burst through the doors. You didn't know where you were, but you knew you were out of there. As far as you're concerned, something's going to be done about this place, even if it's the last thing you do.")
                                                      secrets_ending()
                                              elif choice == '2':
                                                 print("You put the book down, deciding it's not worth you time, and head out the room. However, just as you exited, three people were waiting outside, all of them ready to pin you down in a second. What do you do?")
