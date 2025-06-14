@@ -158,22 +158,29 @@ def post(choice: str):
     if choice == "1":
         return hallway_choice()
     elif choice == "2":
-        return delusion_ending()
-    # Add more door action logic here
+        return bed_choice()
+    elif choice == "3":
+        return window_choice()  # Look around the room leads to window
+    elif choice == "4":
+        return window_choice()
     return Redirect("/")
 
 @rt("/window-action")
 def post(choice: str):
-    if choice == "3":
+    if choice == "1":
+        return door_choice()
+    elif choice == "2":
+        return bed_choice()
+    elif choice == "3":
         return hiding_choice()
-    # Add more window action logic here
     return Redirect("/")
 
 @rt("/bed-action") 
 def post(choice: str):
-    if choice == "2":
-        return delusion_ending()
-    # Add more bed action logic here
+    if choice == "1":
+        return good_ending()  # Yes, investigate the beeping
+    elif choice == "2":
+        return delusion_ending()  # No, don't investigate
     return Redirect("/")
 
 def hallway_choice():
@@ -229,18 +236,22 @@ def hiding_choice():
 def post(choice: str):
     if choice == "1":
         return bad_ending()
+    elif choice == "2":
+        return bad_ending()  # Room across from you
     elif choice == "3":
         return right_hallway_choice()
-    # Add more hallway logic here
     return Redirect("/")
 
 @rt("/hiding-action")
 def post(choice: str):
     if choice == "1":
         return closet_choice()
+    elif choice == "2":
+        return good_ending()  # Under the bed
+    elif choice == "3":
+        return bad_ending()   # Behind the curtain
     elif choice == "4":
-        return bad_ending()
-    # Add more hiding logic here
+        return bad_ending()   # Stand brave
     return Redirect("/")
 
 def closet_choice():
@@ -285,7 +296,10 @@ def right_hallway_choice():
 
 @rt("/closet-action")
 def post(choice: str):
-    # Add closet action logic
+    if choice == "1":
+        return good_ending()  # Stay in place
+    elif choice == "2":
+        return bad_ending()   # Get out and look around
     return Redirect("/")
 
 @rt("/exit-choice")
